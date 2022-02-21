@@ -1,5 +1,5 @@
 #include <iostream>
-#include "main.h"
+#include "../include/main.h"
 #include <GLES3/gl3.h>
 #include <cmath>
 
