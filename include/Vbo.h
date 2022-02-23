@@ -6,16 +6,18 @@
 #define GAME_OPENGL_VBO_H
 #include <GLES3/gl3.h>
 
-class vbo
+class Vbo
 {
-  vbo();
+public:
+  Vbo();
   void Delete();
 
+private:
   GLuint vertex_buffer_obj;
 };
 
 
-vbo::vbo()
+Vbo::Vbo()
 {
   // Create vertex objects to contain and wrap our data to transfer data following opengl conventions.
   glGenBuffers(1, &vertex_buffer_obj); // Create empty buffer for our vertex data.
@@ -25,7 +27,7 @@ vbo::vbo()
   glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
-void vbo::Delete()
+void Vbo::Delete()
 {
   glDeleteBuffers(1, &vertex_buffer_obj);
 }

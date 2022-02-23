@@ -6,15 +6,17 @@
 #define GAME_OPENGL_VAO_H
 #include <GLES3/gl3.h>
 
-class vao
+class Vao
 {
-  vao();
+public:
+  Vao();
   void Delete();
 
+private:
   GLuint vertex_array_obj;
 };
 
-vao::vao()
+Vao::Vao()
 {
   // Create vertex objects to contain and wrap our data to transfer data following opengl conventions.
   glGenVertexArrays(1, &vertex_array_obj);
@@ -23,7 +25,7 @@ vao::vao()
   glBindVertexArray(0);
 }
 
-void vao::Delete()
+void Vao::Delete()
 {
   glDeleteVertexArrays(1, &vertex_array_obj);
 }

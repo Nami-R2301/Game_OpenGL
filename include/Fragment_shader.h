@@ -15,15 +15,17 @@ const char *fragmentShaderSource = "#version 330 core\n"
                                    "   FragColor = color;\n"
                                    "}\n\0";
 
-class fragment
+class Fragment
 {
-  fragment();
+public:
+  Fragment();
   void Delete();
 
+private:
   GLuint fragment_shader;
 };
 
-fragment::fragment()
+Fragment::Fragment()
 {
   fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
   glShaderSource(fragment_shader, 1, &fragmentShaderSource, nullptr);
@@ -31,7 +33,7 @@ fragment::fragment()
   glCompileShader(fragment_shader);
 }
 
-void fragment::Delete()
+void Fragment::Delete()
 {
   // Delete the shaders since they have been compiled and linked in the program.
   glDeleteShader(fragment_shader);

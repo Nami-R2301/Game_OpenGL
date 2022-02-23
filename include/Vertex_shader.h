@@ -15,16 +15,18 @@ const char *vertexShaderSource = "#version 330 core\n"
                                  "   gl_Position = vec4(size * aPos.x, size * aPos.y, size * aPos.z, 1.0);\n"
                                  "}\0";
 
-class vertex
+class Vertex
 {
-  vertex();
+public:
+  Vertex();
   void Delete();
 
+private:
   GLuint vertex_shader;
 };
 
 
-vertex::vertex()
+Vertex::Vertex()
 {
   vertex_shader = glCreateShader(GL_VERTEX_SHADER);
   //Set the source code in shader to the source code in the array of strings specified by string.
@@ -33,7 +35,7 @@ vertex::vertex()
   glCompileShader(vertex_shader);
 }
 
-void vertex::Delete()
+void Vertex::Delete()
 {
   // Delete the shader when it's compiled and linked to a program.
   glDeleteShader(vertex_shader);

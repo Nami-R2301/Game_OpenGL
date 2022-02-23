@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(../glfw-3.3.6/ build)
 
-add_executable(Game_openGL src/main.cpp)
+add_executable(Game_openGL src/main.cpp include/program.h)
 find_package(OpenGL REQUIRED)
 
 target_link_libraries(Game_openGL PUBLIC glfw OpenGL::GL ${CMAKE_DL_LIBS})

@@ -1,5 +1,7 @@
 #include <iostream>
-#include "../include/main.h"
+#include <GLFW/glfw3.h>
+#include "../include/Vertex_shader.h"
+#include "../include/Fragment_shader.h"
 #include <GLES3/gl3.h>
 #include <cmath>
 
@@ -51,16 +53,8 @@ int main()
       3,2,4 // Upper triangle.
   };
 
-  // Create Shaders for our vertex buffer object (VBO).
-  GLuint vertex_shader = glCreateShader(GL_VERTEX_SHADER);
-  GLuint fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
-
-  //Set the source code in shader to the source code in the array of strings specified by string.
-  glShaderSource(vertex_shader, 1, &vertexShaderSource, nullptr);
-  glShaderSource(fragment_shader, 1, &fragmentShaderSource, nullptr);
-  // Compile the shaders into machine code to pass on to the GPU.
-  glCompileShader(fragment_shader);
-  glCompileShader(vertex_shader);
+  Vertex vertex_shader;
+  Fragment fragment_shader;
 
   // Set our shader program to attach our created shader to it (link source codes like '#include').
   GLuint shader_program = glCreateProgram(); // Creates an empty object program (.o).
