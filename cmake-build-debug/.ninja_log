@@ -1,0 +1,23 @@
+# ninja log v5
+2828	3043	1645424126812413055	Game_openGL	88b388b428a632c5
+3	1028	1645424124800388210	build/src/CMakeFiles/glfw.dir/init.c.o	f488dbab48aa701e
+2583	2827	1645424126472408856	build/src/libglfw3.a	f9b15fa949096586
+5	810	1645424124584385543	build/src/CMakeFiles/glfw.dir/vulkan.c.o	9d2c71a7ade81c8d
+3	884	1645424124656386432	build/src/CMakeFiles/glfw.dir/context.c.o	824f905919e56ae5
+1231	1777	1645424125548397446	build/src/CMakeFiles/glfw.dir/xkb_unicode.c.o	35c8ca0b230ae2ae
+0	770	1645424130024452725	build.ninja	8d37175ef7ffae09
+2033	2582	1645424126356407424	build/src/CMakeFiles/glfw.dir/linux_joystick.c.o	e1fca197a31d9647
+1	2715	1645423950954254916	CMakeFiles/Game_openGL.dir/src/main.cpp.o	dbebe6e0ff6c2411
+1537	2033	1645424125804400607	build/src/CMakeFiles/glfw.dir/posix_thread.c.o	15d3954c77e3a4d4
+811	1652	1645424125424395915	build/src/CMakeFiles/glfw.dir/x11_init.c.o	3c41a2e64a689d87
+1652	2535	1645424126200405498	build/src/CMakeFiles/glfw.dir/glx_context.c.o	397adf1021ed8f05
+1496	2533	1645424126180405250	build/src/CMakeFiles/glfw.dir/posix_time.c.o	5aa7770501bc4d81
+1778	2537	1645424126160405004	build/src/CMakeFiles/glfw.dir/osmesa_context.c.o	a1018a42a766106b
+1736	2539	1645424126204405547	build/src/CMakeFiles/glfw.dir/egl_context.c.o	bfa72ba6b4fd7ebc
+1028	2543	1645424126220405745	build/src/CMakeFiles/glfw.dir/x11_window.c.o	ac86eabd7fb58b90
+4	1496	1645424125268393989	build/src/CMakeFiles/glfw.dir/input.c.o	bbbedede7f462bde
+4	1230	1645424124984390482	build/src/CMakeFiles/glfw.dir/monitor.c.o	ac4f5e37075aa45b
+6	1537	1645424125308394483	build/src/CMakeFiles/glfw.dir/window.c.o	4f9573dbc881bed
+885	1736	1645424125504396903	build/src/CMakeFiles/glfw.dir/x11_monitor.c.o	99fed741ae31286
+3	1258	1645459044287288277	CMakeFiles/Game_openGL.dir/src/main.cpp.o	dbebe6e0ff6c2411
+1258	2799	1645459045827260984	Game_openGL	88b388b428a632c5
