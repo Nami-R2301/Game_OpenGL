@@ -2,6 +2,7 @@
 #include <GLFW/glfw3.h>
 #include "../include/Vertex_shader.h"
 #include "../include/Fragment_shader.h"
+#include "../include/draw_vertices.h"
 #include <GLES3/gl3.h>
 #include <cmath>
 
