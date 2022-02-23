@@ -86,7 +86,6 @@ int main()
                vertex_buffer_obj); // Bind it to an array containing multiple VBOs.
   glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // Specify the data.
   // Specify the attribute of the vertex data to create a vertex attribute array for rendering data.
-
   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, evo);
   glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
   // Arguments serve to specify the number, type and stride (number of bytes to 'hop' between data).
@@ -117,7 +116,7 @@ int main()
     glBindVertexArray(vertex_array_obj);
     glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, nullptr); // Draw from vertex arrays.
 
-    // Export variables to shader
+    // Export variables to shader.
     glUseProgram(shader_program);
     glUniform1f(glGetUniformLocation(shader_program, "size"), size);
     glUniform4f(glGetUniformLocation(shader_program, "color"), color[0], color[1], color[2],
