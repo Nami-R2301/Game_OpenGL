@@ -10,7 +10,7 @@ class Shader
   void Delete() const;
 
 
-  GLuint shader_program = 0;
+  GLuint program_shader = 0;
 };
 
 Shader::Shader(const char *vertex_source, const char *fragment_source)
@@ -27,12 +27,12 @@ Shader::Shader(const char *vertex_source, const char *fragment_source)
   glCompileShader(vertex_shader);
 
   // Set our shader program to attach our created shader to it (link source codes like '#include').
-  shader_program = glCreateProgram(); // Creates an empty object program (.o).
-  glAttachShader(shader_program, vertex_shader);
-  glAttachShader(shader_program, fragment_shader);
+  program_shader = glCreateProgram(); // Creates an empty object program (.o).
+  glAttachShader(program_shader, vertex_shader);
+  glAttachShader(program_shader, fragment_shader);
 
   // Links all source codes (shaders) in the program given as argument, creating the executable.
-  glLinkProgram(shader_program);
+  glLinkProgram(program_shader);
 
   // Delete the shaders since they have been compiled and linked in the program.
   glDeleteShader(vertex_shader);
@@ -41,10 +41,10 @@ Shader::Shader(const char *vertex_source, const char *fragment_source)
 
 void Shader::Activate() const
 {
-  glUseProgram(shader_program);
+  glUseProgram(program_shader);
 }
 
 void Shader::Delete() const
 {
-  glDeleteProgram(shader_program);
+  glDeleteProgram(program_shader);
 }
