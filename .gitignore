@@ -2,7 +2,4 @@
 *.exe
 *.out
 
-# IDE config files
-.idea/
-cmake-build-debug
 
